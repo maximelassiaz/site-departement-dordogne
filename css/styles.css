@@ -1,0 +1,272 @@
+:root {
+    --primary: #3B3737;
+    --hover: #427B53;
+    --secondary: rgb(163, 52, 52);
+    --active: rgb(221, 221, 85);
+    --text: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary);
+    color: var(--text);
+}
+h1, h2, h3, h4, p, address {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.171);
+}
+
+.background-round, .sites-image, .market-card, .news-card{
+    background-color: var(--secondary);
+    margin: 20px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.171);
+}
+
+/* HEADER */
+
+.banner {
+    background-image: url("../img/banner-dordogne.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position : center;
+}
+
+.banner-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.logo {
+    width: 10%;
+}
+
+.motto {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+}
+
+.navbar-menu {
+    padding-bottom: 25px;
+}
+
+.navbar-menu ul {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-menu li {
+    list-style: none;
+}
+
+.navbar-menu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    padding: 10px 10px;
+}
+
+.navbar-menu li a:hover {
+    background-color: var(--hover);
+}
+
+.active {
+    color: var(--active);
+}
+
+/* LANDING PAGE */
+
+.geography img {
+    float: left;
+    margin: 50px;
+    box-shadow: none;
+}
+
+.images-landing {
+    text-align: center;
+}
+
+.images-landing img {
+    margin: 20px 0;
+    width: 80%;
+}
+
+/* SITES PAGE */
+
+.sites-image {
+    background-color: var(--secondary);
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px 0;
+    width: 80%;
+}
+
+.sites-image h2 {
+    font-size: 1.1rem;
+    padding-bottom: 15px;
+}
+
+.sites-image img {
+    width: 50%;
+}
+
+/* MARKET PAGE */
+
+.market-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.75rem auto;
+    width: 80%;  
+}
+
+.market-card h2 {
+    text-transform: capitalize;
+}
+
+.market-card h3, .market-card h4{
+    text-transform: uppercase;
+    margin : 0.75rem;
+}
+
+.market-card img {
+    width: 275px;
+    height: 155px;
+}
+
+.hr-big {
+    width: 95%;
+}
+
+.hr-small {
+    width: 50%;
+}
+
+/* NEWS PAGE */
+
+.news-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+.news-card h2{
+    border-bottom: 1px solid white;
+    text-transform: capitalize;
+    margin: 15px;
+}
+
+.news-card img {
+    width: 275px;
+    height: 155px;
+}
+
+/* FOOTER */
+
+footer ul {
+    display : flex;
+    justify-content: space-around;
+}
+
+footer li {
+    list-style: none;
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:800px) {
+    /* GENERAL */
+    h1 {
+        font-size: 2rem;
+    }
+    .motto {
+        font-size: 50px;
+    }
+    .navbar-menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    /* LANDING PAGE */
+    .section-landing {
+        display: flex;
+    }
+    .images-landing-images {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .images-landing img {
+        width: 385px;
+        height: 245px;
+        margin: 10px 20px;
+    }
+    /* SITES PAGE */
+    .sites {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .sites-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        margin: 20px;
+    }
+    .sites-image img {
+        width: 200px;
+        margin: 0;
+    }
+    /* MARKET PAGE */
+    .section-market {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .market-card {
+        width: 350px;
+        margin: 20px;
+    }
+    /* NEWS PAGE */
+    .section-news {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .news-card {
+        width: 350px;
+        margin: 20px;
+    }
+}
